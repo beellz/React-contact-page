@@ -3,6 +3,20 @@ import Card from "./card"
 import contacts from "../contacts"
 
 
+function createCard(contact) {
+  return <Card 
+  id={contact.id}
+  key={contact.id}
+  name={contact.name} 
+  img={contact.imgURL}
+  tel={contact.phone}
+  email={contact.email}       
+          />
+
+};
+
+
+
 function App() {
 
 
@@ -10,6 +24,10 @@ function App() {
 
     <div>
       <h1 className="heading">My Contacts</h1>
+
+    {contacts.map(createCard)}
+
+{/*       
       <Card 
         name={contacts[0].name}
         img={contacts[0].imgURL}
@@ -29,7 +47,7 @@ function App() {
         img={contacts[2].imgURL}
         tel={contacts[2].phone}
         email={contacts[2].email}
-      />
+      /> */}
 
      </div>
   );
