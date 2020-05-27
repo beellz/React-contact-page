@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./card"
 import contacts from "../contacts"
 
-
+// This is for the map function to return multiple cards at once
 function createCard(contact) {
   return <Card 
   id={contact.id}
@@ -12,22 +12,20 @@ function createCard(contact) {
   tel={contact.phone}
   email={contact.email}       
           />
-
 };
 
 
 
 function App() {
-
-
   return (
-
     <div>
       <h1 className="heading">My Contacts</h1>
-
+{/* this is a map to create multiple card at once */}
     {contacts.map(createCard)}
 
+
 {/*       
+  this was old way to put all the cards one by one
       <Card 
         name={contacts[0].name}
         img={contacts[0].imgURL}
