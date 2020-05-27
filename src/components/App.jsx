@@ -26,6 +26,7 @@ function App() {
 
 {/*       
   this was old way to put all the cards one by one
+  to make sure 
       <Card 
         name={contacts[0].name}
         img={contacts[0].imgURL}
